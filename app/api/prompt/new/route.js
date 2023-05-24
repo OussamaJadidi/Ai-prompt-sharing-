@@ -13,7 +13,7 @@ export const POST = async (req, res) => {
     await newPrompt.save();
 
     return new Response(JSON.stringify(newPrommpt), {
-      status: 201,
+      status: 200,
     });
   } catch (error) {
     return new Response("Failed to create a new prompt", { status: 500 })
